@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* MOBILE ONLY */
+.app {
+  max-width: 430px;
+  margin: auto;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* STORY LIST */
+.story-list {
   display: flex;
-  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  overflow-x: auto;
+}
+
+.story-thumb {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #ff0050;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.story-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* STORY VIEWER */
+.story-viewer {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 3px;
+  background: rgba(255,255,255,0.3);
+}
+
+.progress {
+  height: 100%;
+  background: white;
+  animation: fill 5s linear;
+}
+
+@keyframes fill {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* LOADER */
+.loader {
+  position: absolute;
+  font-size: 16px;
+}
+
+/* CLOSE */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  font-size: 22px;
 }
