@@ -137,7 +137,7 @@ export default function TicTacToePOC() {
 
       return () => clearTimeout(timer);
     }
-  }, [isXNext, board, level, winner]);
+  }, [isXNext, board, level, winner ,checkWinner, getBestMoveMinimax, getMediumMove, getRandomMove]);
 
   // Handle Human Click
   const handleClick = (index) => {

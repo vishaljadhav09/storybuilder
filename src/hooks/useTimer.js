@@ -11,5 +11,5 @@ export default function useStoryTimer(active, index, onNext) {
     }, 5000);
 
     return () => clearTimeout(timerRef.current);
-  }, [index, active]);
+  }, [index, active ,onNext]);
 }
