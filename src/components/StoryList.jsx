@@ -1,3 +1,5 @@
+/* The code snippet is defining a React functional component called `StoryList`. This component takes
+two props, `stories` and `onSelect`. */
 export default function StoryList({ stories, onSelect }) {
   return (
     <div className="story-list">

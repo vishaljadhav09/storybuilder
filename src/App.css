@@ -1,3 +1,5 @@
+/* This is a CSS code snippet that defines styles for different elements of a web page. Here's a
+breakdown of what each part of the code is doing: */
 body {
   margin: 0;
   background: #000;
@@ -7,9 +9,17 @@ body {
 
 /* MOBILE ONLY */
 .app {
+  /* //max-width: 430px; */
+  margin: auto;
+  height: 100vh;
+  background-color: #a7a6a6;
+}
+
+.app-mob{
   max-width: 430px;
   margin: auto;
   height: 100vh;
+  background-color: #a7a6a6;
 }
 
 /* STORY LIST */
